@@ -1,14 +1,6 @@
-import { lazy, LazyExoticComponent } from "react";
+import { lazy } from "react";
 import { NoLazy } from "../01-lazyload/pages/NoLazy";
-
-type JSXComponent = () => JSX.Element;
-
-interface Route {
-  to: string;
-  path: string;
-  Component: LazyExoticComponent<JSXComponent> | JSXComponent;
-  name: string;
-}
+import { Route } from "../Interfaces/global";
 
 const LazyLayout = lazy(
   () =>
